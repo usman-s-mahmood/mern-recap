@@ -1,0 +1,12 @@
+.vscode/
+.vs/
+node_modules/
+misc/
+venv/
+virt/
+*.mp4
+*.mp3
+*.env
+secrets.json
+*.*~
+*.SWP
