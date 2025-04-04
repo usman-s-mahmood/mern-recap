@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard"
 import Projects from './pages/Projects'
 import Header from "./components/Header"
 import { Toaster } from "react-hot-toast"
+import FooterComp from "./components/FooterComp"
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
             element={<Projects />}
           />
         </Routes>
+        <FooterComp />
       </BrowserRouter>
     </>
   )
