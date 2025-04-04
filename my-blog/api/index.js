@@ -1,12 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv'
+import userRoutes from './routes/user.route.js';
 
 dotenv.config()
 
 try {
     mongoose.connect(
-        process.env.MONGO // 'mongodb+srv://use_your_username:use_your_password@cluster0.uwvx8w4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+        process.env.MONGO // 'mongodb+srv://use_your_username:use_your_password@cluster0.uwvx8w4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0' -> define this in api/.env
     ).then(() => {
         console.log('MongoDB Connected!')
     }).catch((err) => {
@@ -22,3 +23,5 @@ const app = express();
 app.listen(3000, () => {
     console.log('Server is running on port 3000!');
 });
+
+app.use('/api/user', userRoutes);
