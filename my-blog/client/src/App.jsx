@@ -11,6 +11,7 @@ import SignUp from "./pages/SignUp"
 import Dashboard from "./pages/Dashboard"
 import Projects from './pages/Projects'
 import Header from "./components/Header"
+import { Toaster } from "react-hot-toast"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
+        <Toaster position="top-center" />
         <Routes>
           <Route
             path="/"
